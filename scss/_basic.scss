@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $textFont;
+  font-size: $fontSize;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $textColor;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color $transition;
+}
+
+.py {
+  padding: $py;
+}
+
+.container {
+  width: $containerWidth;
+  max-width: 1140px;
+  margin: 0 auto;
+}

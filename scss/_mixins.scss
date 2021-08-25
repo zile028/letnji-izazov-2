@@ -1,0 +1,18 @@
+@mixin flex($x: space-between, $y: stretch, $d: row) {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: $d;
+  @if ($d==row) {
+    justify-content: $x;
+    align-items: $y;
+  } @else if($d==column) {
+    justify-content: $y;
+    align-items: $x;
+  }
+}
+
+@mixin bgBasic($pos: center, $size: cover) {
+  background-position: $pos;
+  background-size: $size;
+  background-repeat: no-repeat;
+}
