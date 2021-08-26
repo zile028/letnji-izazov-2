@@ -6,6 +6,52 @@ h1 {
   line-height: 1.3;
 }
 
+h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 10px 0;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: $lightGray;
+  margin: 50px auto;
+}
+
+.underline {
+  @include flex;
+  width: 150px;
+  margin: 20px auto;
+  div {
+    background-color: $primary;
+    height: 6px;
+    border-radius: 4px;
+  }
+  .item1 {
+    flex: 0 0 58%;
+  }
+  .item2 {
+    flex: 0 0 28%;
+  }
+  .item3 {
+    flex: 0 0 9%;
+  }
+}
+
+.lead {
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
 .btn {
   color: $white;
   padding: 5px 30px;
@@ -14,12 +60,19 @@ h1 {
   display: inline-block;
   margin-top: 20px;
   text-transform: uppercase;
+  margin-right: 20px;
   span {
     margin-left: 5px;
     transition: $transition;
   }
   &-orange {
     background-color: $accents;
+  }
+  &-violet {
+    background-color: $primary;
+    &:hover {
+      background-color: $accents;
+    }
   }
   &:hover {
     opacity: 0.8;

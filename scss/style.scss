@@ -1,7 +1,7 @@
 @import "var";
 @import "basic";
-@import "global";
 @import "mixins";
+@import "global";
 
 // nav
 nav {
@@ -53,6 +53,111 @@ header {
       p {
         font-size: 1.3rem;
         font-weight: 300;
+      }
+    }
+  }
+}
+
+// uvod
+.uvod {
+  text-align: center;
+  article {
+    @include flex;
+    margin-top: 20px;
+    div {
+      @include flex(flex-start, space-between, column);
+      flex: 0 0 28%;
+      text-align: left;
+      min-height: 450px;
+      border-radius: 30px;
+      box-shadow: $boxShadow;
+      padding: 60px;
+      margin-bottom: 30px;
+      transition: $transition;
+      i {
+        font-size: 2.5rem;
+        height: 2.5em;
+        width: 2.5em;
+        text-align: center;
+        line-height: 2.5em;
+        border-radius: 50%;
+        color: $black;
+      }
+      h3 {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+      &:hover {
+        background: linear-gradient(
+          120deg,
+          rgba($primary, 0.9),
+          rgba($secondary, 0.8)
+        );
+        color: $white;
+        i {
+          background-color: $white;
+          box-shadow: 0 5px 10px $black;
+        }
+      }
+    }
+  }
+}
+
+// onama
+.onama {
+  @include flex($y: center);
+  article {
+    flex: 0 0 48%;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+// utisci
+.utisci {
+  background-color: $secondary;
+  .container {
+    @include flex;
+    .card {
+      flex: 0 0 40%;
+      border-radius: 20px;
+      background-color: $white;
+      position: relative;
+      border: 1px solid $accents;
+      overflow: hidden;
+      top: (-1.5rem * 2.5);
+      div {
+        padding: 30px;
+        @include flex(flex-start, space-between, column);
+      }
+      small {
+        display: inline-block;
+        margin-top: 20px;
+      }
+    }
+    h3 {
+      background-color: $accents;
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 0;
+      color: $white;
+      height: 2.5em;
+      line-height: 2.5em;
+    }
+    h4 {
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .slider {
+      flex: 0 0 58%;
+      overflow: hidden;
+      color: $white;
+      small {
+        display: inline-block;
+        margin-top: 20px;
       }
     }
   }
